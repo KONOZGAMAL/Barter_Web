@@ -1,4 +1,4 @@
-import {React , useState , useEffect , useRef} from 'react'
+import {React , useState , useEffect } from 'react'
 import Style from './Register.module.css'
 
 const USER_REGEX = /^[A-z][A-z0-9-_]{3,23}$/;
