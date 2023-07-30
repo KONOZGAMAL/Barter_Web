@@ -1,6 +1,7 @@
 import React from 'react';
-import './Header.module.css';
-import {NavLink} from 'react-router-dom';
+import Style from './Header.module.css';
+import '../../../Styles/globals.css'
+import {Link , NavLink} from 'react-router-dom';
 import SearchIcon from '@mui/icons-material/Search';
 import LanguageIcon from '@mui/icons-material/Language';
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
@@ -13,7 +14,7 @@ export default function Header() {
   }
   return (
     <header>
-      <div className='logo'>
+      <div className={Style.logo}>
        <img src='' alt='logo' />
       </div>
       <nav>
@@ -21,11 +22,15 @@ export default function Header() {
        <NavLink style={navBarStyles} to="/services">Services</NavLink>
        <NavLink style={navBarStyles} to="/reviews">Reviews</NavLink>
       </nav>
-      <div className='Icons'>
+      <div className={Style.Icons}>
         <div><SearchIcon/></div>
         <div><LanguageIcon/></div>
-        <div><AccountCircleIcon/></div>
+        <Link to='register'><AccountCircleIcon/></Link>
       </div>
     </header>
   )
 }
+
+
+  
+    

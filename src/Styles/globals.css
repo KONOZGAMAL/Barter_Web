@@ -1,5 +1,6 @@
 :root {
   /* Color */
+   --bg-color:#FFFFFF;
     --clr-i : #FFeeFF;
     --clr-ii : #FFCAFF;
     --clr-iii : #E99EFF;
@@ -14,6 +15,7 @@
     --color-eight : #BE17FF;
     --color-nine : #B400FF;
     --color-ten : #AB00FF;
+    --color-input:#8B8B8B;
   /* Width */
   --max-width: 1440px;
   --border-radius: 12px;
@@ -29,6 +31,7 @@ html,
 body {
   max-width: 100vw;
   overflow-x: hidden;
+  background-color: var(--bg-color);
 }
 
 a {
