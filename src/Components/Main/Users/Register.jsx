@@ -6,7 +6,7 @@ const EMAIL_REGEX = /^\S+@\S+\.\S+$/;
 const PWD_REGEX = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%]).{6,16}$/;
 const REGISTER_URL = "/register";
 export default function Register() {
-  const userRef = useRef<HTMLInputElement>(null);
+  const userRef = useRef();
   const [firstname, setFirstName] = useState("");
   const [userFocus, setUserFocus] = useState(false);
   const [validFirstName, setValidFirstName] = useState(false);
@@ -26,9 +26,9 @@ export default function Register() {
   const [matchPwd, setMatchPwd] = useState("");
   const [validMatch, setValidMatch] = useState(false);
 
-  useEffect(() => {
-      userRef.current.focus();
-}, [])
+  // useEffect(() => {
+//       userRef.current.focus();
+// }, [])
 useEffect(() => {
   setValidFirstName(USER_REGEX.test(firstname));
   setValidLastName(USER_REGEX.test(lastName));
