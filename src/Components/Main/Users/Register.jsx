@@ -4,11 +4,11 @@ import Style from './Register.module.css'
 const USER_REGEX = /^[A-z][A-z0-9-_]{3,23}$/;
 const EMAIL_REGEX = /^\S+@\S+\.\S+$/;
 const PWD_REGEX = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%]).{6,16}$/;
-const REGISTER_URL = "/register";
+// const REGISTER_URL = "/register";
 export default function Register() {
-  const userRef = useRef();
+  // const userRef = useRef();
   const [firstname, setFirstName] = useState("");
-  const [userFocus, setUserFocus] = useState(false);
+  // const [userFocus, setUserFocus] = useState(false);
   const [validFirstName, setValidFirstName] = useState(false);
 
   const [lastName, setLastName] = useState("");
@@ -16,12 +16,12 @@ export default function Register() {
 
 
   const [email, setEmail] = useState("");
-  const [emailFocus, setEmailFocus] = useState(false);
+  // const [emailFocus, setEmailFocus] = useState(false);
   const [validEmail, setValidEmail] = useState(false);
 
   const [pwd, setPwd] = useState("");
   const [validPwd, setValidPwd] = useState(false);
-  const [pwdFocus, setPwdFocus] = useState(false);
+  // const [pwdFocus, setPwdFocus] = useState(false);
 
   const [matchPwd, setMatchPwd] = useState("");
   const [validMatch, setValidMatch] = useState(false);
@@ -59,8 +59,6 @@ useEffect(() => {
             required
             aria-describedby="uidnote"
             placeholder='Write Your First Name'
-            onFocus={() => setUserFocus(true)}
-            onBlur={() => setUserFocus(false)}
             />
            
              <p  className={validFirstName || !firstname?Style.hide : Style.invalid }>First Name shoud be greater than 3 characters</p>
@@ -91,8 +89,6 @@ useEffect(() => {
             onChange={(e) => setEmail(e.target.value)}
             aria-describedby="uidnote"
             placeholder='Write your Email'
-            onFocus={() => setEmailFocus(true)}
-            onBlur={() => setEmailFocus(false)}
             />
             {
               email === ''? '' :<p  className={validEmail ?Style.hide : Style.invalid }>The Email is not Valid</p>
